@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikachu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landingpage.css">
+</head>
+<body>
+    <header>
+        <h1>Mascot of Pokémon Games: Pikachu</h1>
+    </header>
+    <main>
+        <p id="intro">
+            Pikachu is popularly known as the mascot of the Pokémon franchise and a major representative of Nintendo's collective mascots. It is also the game mascot and starter Pokémon of Pokémon Yellow and Pokémon: Let's Go, Pikachu!<br>
+            It has made numerous appearances on the boxes of spin-off titles. Pikachu is the most famous Pokémon, making the Pokémon cartoons popular worldwide. <br> So, let's learn more about this iconic character!
+        </p>
+        <p id="voice">
+            Its voice is:
+            <audio controls>
+                <source src="https://mobcup.net/d/xb5800li/mp3" type="audio/mp3">
+            </audio>
+        </p>
+        <p id="pi">
+            Pikachu stores up electricity. Forests where Pikachu nests are often struck by lightning.
+        </p>
+
+        <div id="image-buttons">
+            <button onclick="Pikachu()">Pikachu</button>
+            <img id="slider" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="Pikachu" />
+            <button onclick="ShinyPikachu()">Shiny Pikachu</button>
+        </div>
+
+        <h2>Evolution of Pikachu</h2>
+        <div class="card-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/09/How-Pichu-Killed-Off-One-Of-Gen-1s-Coolest-Pok%C3%A9mon.jpg" alt="Pichu">
+                        <p><u>Click to get info</u></p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Pikachu evolves from Pichu when leveled up with high friendship.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png" alt="Raichu">
+                        <p><u>Click to get info</u></p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Pikachu evolves into Raichu when exposed to a Thunder Stone.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="https://nintendosoup.com/wp-content/uploads/2021/02/maxpikaraid-1280x720.png" alt="Gigantamax Pikachu">
+                        <p><u>Click to get info</u></p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Pikachu has a Gigantamax form, which allows it to use G-Max Volt Crash.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Characteristics of Pikachu</h3>
+        <p id="char">
+            <strong>Height:</strong> 1' 04" <br>
+            <strong>Weight:</strong> 13.2 lbs <br>
+            <strong>Category:</strong> Mouse <br>
+            <strong>Abilities:</strong> Static <br>
+            <strong>Weakness:</strong> Ground <br>
+            <strong>Type:</strong> Electric <br>
+            <strong>Strong Against:</strong> Water, Flying
+        </p>
+    </main>
+    <footer>
+        <p>Information about Pikachu is gathered from various sources.</p>
+    </footer>
+	<script>
+	var images = [
+    'https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png', 
+    'https://i.pinimg.com/originals/81/37/9b/81379bf3ebf3ab6c169cd3da781f0599.png'
+];
+var num = 0;
+function ShinyPikachu() {
+    var slider = document.getElementById('slider');
+    num++;
+    if(num >= images.length) {
+        num = 0;
+    }
+    slider.src = images[num];
+}
+function Pikachu() {
+    var slider = document.getElementById('slider');
+    num--;
+    if(num < 0) {
+        num = images.length-1;
+    }
+    slider.src = images[num];
+}
+	</script>
+</body>
+</html>
